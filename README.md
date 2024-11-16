@@ -44,7 +44,7 @@ This platform not only reduces interview stress and anxiety but also boosts conf
   - Technical: Subject-specific questions in areas like Java, Python, C, C++, and OOP concepts.
   **Screenshot of User Exam Page:**
 ![Select Category](screenshots/Select Category.png)
--Select Subjects:
+-Select Subjects
 **Screenshot of User Exam Page:**
 ![Select Subject](screenshots/Select Subject.png)
 - Speak answers during the exam.
