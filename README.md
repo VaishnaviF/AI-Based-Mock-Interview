@@ -13,48 +13,43 @@ This platform not only reduces interview stress and anxiety but also boosts conf
 ---
 
 ## **System Features**
-### ** Landing Page**
-**Screenshot of User Exam Page:**
-![Landing Page](screenshots/Landing Page.png)
+
+### **Landing Page**
+![Landing Page](screenshots/Landing_Page.png)
+
 ### **Admin Functionalities**
-- Login to the system.
-**Screenshot of User Exam Page:**
-![User Login](screenshots/User Login.png)
+- **Login to the system**
+  ![Admin Login](screenshots/Admin_Login.png)
 
-- Upload datasets.
-  **Screenshot of User Exam Page:**
-![Upload Dataset](screenshots/Upload Dataset.png)
+- **Upload datasets**
+  ![Upload Dataset](screenshots/Upload_Dataset.png)
 
-- Train the **CNN model** for facial expression recognition.
-  **Screenshot of User Exam Page:**
-![Train Model](screenshots/Train Model.png)
-- View performance metrics of trained models.
-  **Screenshot of User Exam Page:**
-![View performance](screenshots/View performance.png)
-- Access and review candidates' exam results.
-  **Screenshot of User Exam Page:**
-![View Result](screenshots/View Result.png)
+- **Train the CNN model for facial expression recognition**
+  ![Train Model](screenshots/Train_Model.png)
+
+- **View performance metrics of trained models**
+  ![View Performance](screenshots/View_Performance.png)
+
+- **Access and review candidates' exam results**
+  ![View Results](screenshots/View_Results.png)
 
 ### **User Functionalities**
-- **Sign up** and log in to the platform.
-  **Screenshot of User Exam Page:**
-![User Login](screenshots/User Login.png)
-- Choose between **Behavioral** and **Technical** categories:
-  - Behavioral: General questions to evaluate confidence and communication.
-  - Technical: Subject-specific questions in areas like Java, Python, C, C++, and OOP concepts.
-  **Screenshot of User Exam Page:**
-![Select Category](screenshots/Select Category.png)
--Select Subjects
-**Screenshot of User Exam Page:**
-![Select Subject](screenshots/Select Subject.png)
-- Speak answers during the exam.
-- View results with detailed feedback on:
-  - Facial expression analysis.
-  - Confidence level in speech.
-  - Knowledge evaluation with suggestions for improvement.
-**Screenshot of User Exam Page:**
-![Result](screenshots/Result.png)
+- **Sign up and log in to the platform**
+  ![User Login](screenshots/User_Login.png)
 
+- **Choose between Behavioral and Technical categories**
+  ![Select Category](screenshots/Select_Category.png)
+
+- **Select Subjects**
+  ![Select Subject](screenshots/Select_Subject.png)
+
+- **Speak answers during the exam**
+  ![Speak Answer](screenshots/Speak_Answer.png)
+
+- **View results with detailed feedback**
+  ![View Results](screenshots/View_Results_User.png)
+
+---
 ## **System Functionalities**
 - **Facial Expression Recognition (FER):** Uses a **CNN model** trained on Kaggle's FER dataset to classify emotions (e.g., happy, neutral, angry, sad, surprise).
 - **Speech Processing:** Recognizes and processes spoken answers using **SpeechRecognition** and **PyAudio** libraries.
