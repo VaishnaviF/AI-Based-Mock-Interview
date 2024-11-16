@@ -1,4 +1,4 @@
-![Screenshot 2024-10-09 133805](https://github.com/user-attachments/assets/a98ad86a-6056-4397-a65f-e387879177dc)# **AI-Based Mock Interview Evaluator**
+# **AI-Based Mock Interview Evaluator**
 
 ## **Abstract**
 Interviews are a critical milestone for candidates, as they determine career outcomes based on their hard work and preparation. This project proposes an **AI-Based Mock Interview Evaluator**, a platform that bridges the gap between preparation and real interviews. 
