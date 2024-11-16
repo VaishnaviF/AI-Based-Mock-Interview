@@ -32,32 +32,11 @@ This platform not only reduces interview stress and anxiety but also boosts conf
   - Confidence level in speech.
   - Knowledge evaluation with suggestions for improvement.
 
-### **System Functionalities**
+## **System Functionalities**
 - **Facial Expression Recognition (FER):** Uses a **CNN model** trained on Kaggle's FER dataset to classify emotions (e.g., happy, neutral, angry, sad, surprise).
 - **Speech Processing:** Recognizes and processes spoken answers using **SpeechRecognition** and **PyAudio** libraries.
 - **Grammar Verification:** Analyzes grammatical accuracy using **language_tool_python**.
 - Provides **rule-based feedback** based on scores and performance.
-
----
-
-## **Implementation**
-
-### **System Architecture**
-The platform integrates:
-- **Facial Expression Recognition (FER):** Captures real-time images via webcam, applies a Haar Cascade Classifier for face detection, and predicts emotions using a trained CNN model.
-- **Speech Recognition and Analysis:** Converts spoken responses to text and evaluates grammar and confidence using audio processing libraries.
-- **Knowledge Evaluation:** Utilizes web scraping to find relevant keywords in responses and maps them to online resources for semantic analysis.
-
-### **Modules in the Proposed System**
-1. **Facial Expression Recognition (FER):**
-   - Detects and classifies emotions (happy, neutral, sad, surprise, etc.).
-   - Trained on Kaggle's FER dataset using CNN with four convolutional layers, three pooling layers, and two fully connected layers.
-2. **Speech Processing:**
-   - Converts speech to text using **SpeechRecognition** and **PyAudio**.
-   - Verifies grammar using **language_tool_python**.
-3. **Knowledge Base Evaluation:**
-   - Extracts keywords from text responses.
-   - Maps keywords to resources using web scraping for comprehensive evaluation.
 
 ---
 
@@ -69,6 +48,7 @@ The platform integrates:
 ---
 
 ## **Technologies and Libraries**
+- **Python Version:** 3.6
 - **Python Frameworks:** Django, OpenCV, Keras
 - **Libraries for FER:** OpenCV, Keras, TensorFlow
 - **Speech and Text Processing:** SpeechRecognition, PyAudio, language_tool_python
