@@ -80,8 +80,8 @@ This platform not only reduces interview stress and anxiety but also boosts conf
 
 ### **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/ai-mock-interview-evaluator.git
-cd ai-mock-interview-evaluator
+git clone https://github.com/VaishnaviF/AI-Based-Mock-Interview.git
+cd AI-Based-Mock-Interview
 ```
 
 ### **Install Required Libraries**
