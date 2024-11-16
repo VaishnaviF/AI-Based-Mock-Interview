@@ -1,0 +1,26 @@
+{% extends 'u_base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% static "assets/images" as baseUrl %}
+
+<h5><font size="" color="blue">{{msg}}</font></h4>
+<center>
+<h2>Answer here</h2>
+<br>
+<form method="post" action="/answerpro2/" >
+ {% csrf_token %}			
+
+<input type="hidden" name="que" value="{{data.question}}">
+<input type="hidden" name="qid" value="{{data.id}}">
+<input type="hidden" name="sub" value="{{data.sub}}">
+
+		<input type="image" src="{{baseUrl}}/MIC.png" alt="Submit" height="55" style="" ><br>
+	</form>
+<center>
+
+
+<font size="-1" color="#ccccff">{{data,answer}}</font>
+{% endblock %}

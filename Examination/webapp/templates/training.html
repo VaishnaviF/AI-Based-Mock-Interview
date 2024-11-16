@@ -1,0 +1,23 @@
+{% extends 'a_base.html' %}
+{% block content %}
+<h5><font size="" color="blue">{{msg}}</font></h4>
+<center>
+<h2>Facial Expression Model Creation</h2>
+<br>
+
+<center>
+<form method="post" action="/training/">
+ {% csrf_token %}			
+ 
+<table id="tab" width="50%">
+
+	<tr><td>
+
+	<input type="submit" value="CNN MODEL CREATE" class="form-control">
+
+</form>
+
+</tr>
+</table>
+
+{% endblock %}

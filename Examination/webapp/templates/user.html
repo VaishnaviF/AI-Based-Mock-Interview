@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<font size="" color="#006837">{{msg}}</font>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <!-- User Login Card -->
+        <div class="col-md-6" id="loginCard">
+            <div class="card" style="background-color:rgb(51 97 179 / 10%); backdrop-filter: blur(10px); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                <div class="card-body">
+                    <h2 class="text-center">User Login</h2><br>
+                    <form method="post" action="/userloginaction/">
+                        {% csrf_token %}
+                        <table class="table-borderless" style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <input size="60" class="form-control" type="email" name="mail" placeholder="Email, example@example.com" required="required" onblur="validate1()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" size="60" type="password" name="pass_word" placeholder="Password" required="required" onblur="validate5()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="text-center">
+                                    <br>
+                                    <input type="submit" class="btn btn-primary" value="Login">
+                                </td>
+                            </tr>
+
+                        </table>
+                        <!-- Create Account Link in Center -->
+                        <td class="text-center">
+                            <br>
+                            <b style="text-align: center; display: block;">
+                                <a href="#" id="showSignup" style="text-align: center;">Click here</a> to create an account
+                            </b>
+                        </td>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Account Card -->
+        <div class="col-md-6" id="signupCard" style="display: none;"> <!-- Initially hidden -->
+            <div class="card" style="background-color: rgb(51 97 179 / 10%); backdrop-filter: blur(10px); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+                <div class="card-body">
+                    <h2 class="text-center">Create an Account</h2><br>
+                    <form method="post" action="/usignupaction/">
+                        {% csrf_token %}
+                        <table class="table-borderless" style="width: 100%;">
+                            <tr>
+                                <td>
+                                    <input class="form-control" type="text" name="name" placeholder="Full Name" required="required" size="50" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" type="email" name="mail" placeholder="Email, example@example.com" required="required" size="50" onblur="validate1()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" type="text" name="phone" placeholder="Phone" required="required" size="50" onblur="validate3()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" type="text" name="city" placeholder="City" required="required" size="50" onblur="validate3()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" type="text" name="age" placeholder="Age" required="required" size="50" onblur="validate3()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <select name="gen" class="form-control" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                        <option value="male" selected>Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input class="form-control" type="password" name="pass_word" placeholder="Password" required="required" size="50" onblur="validate5()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <br>
+                                    <input type="submit" class="btn btn-primary" value="Register">
+                                </td>
+                            </tr>
+                        </table>
+                        <b><br><a href="#" id="showLogin">Click here</a> to go back to login</b>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // JavaScript to toggle between login and signup cards
+    document.getElementById('showSignup').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        document.getElementById('loginCard').style.display = 'none'; // Hide login card
+        document.getElementById('signupCard').style.display = 'block'; // Show signup card
+    });
+
+    document.getElementById('showLogin').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        document.getElementById('signupCard').style.display = 'none'; // Hide signup card
+        document.getElementById('loginCard').style.display = 'block'; // Show login card
+    });
+</script>
+
+{% endblock %}

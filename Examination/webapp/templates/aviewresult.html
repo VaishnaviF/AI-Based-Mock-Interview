@@ -1,0 +1,52 @@
+{% extends 'a_base.html' %}
+
+{% load static %}
+{% block content %}
+
+<h3>
+   {{msg}}
+</h3>
+<h3>Exam Results<br><br></h3>
+
+<center>
+   <table id="tab" width="100%">
+      <tr>
+         <th width="5%">Sno</th>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Exam Id</th>
+         <th>Date & Time</th>
+         <th>Subject</th>
+         <th>Result</th>
+         <th>Actions</th>
+      </tr>
+
+      {% for d in data %}
+      <tr>
+         <td>{{forloop.counter}}</td>
+         <td>{{d.name}}</td>
+         <td>{{d.email}}</td>
+         <td>{{d.eid}}</td>
+         <td>{{d.date_time}}</td>
+         <td>{{d.subject}}</td>
+         <td>{{d.result}}%</td>
+         <td>
+            <!-- View Details Button -->
+            <form method="get" action="/aviewdetail/" style="display: inline;">
+               <input type="hidden" name="eid" value="{{d.eid}}">
+               <input type="submit" value="View Details">
+            </form>
+
+            <!-- Delete Button -->
+            <form method="post" action="/delete_exam_result/" style="display: inline;">
+               {% csrf_token %}
+               <input type="hidden" name="eid" value="{{d.eid}}">
+               <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this result?');">
+            </form>
+         </td>
+      </tr>
+      {% endfor %}
+   </table>
+</center>
+
+{% endblock %}

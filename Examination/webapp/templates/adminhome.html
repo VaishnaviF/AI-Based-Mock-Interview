@@ -1,0 +1,46 @@
+{% extends 'a_base.html' %}
+{% block content %} 
+
+<h2>Welcome Admin
+<hr>
+</h2>
+<h4>{{msg}}</h4>
+
+
+{% if b %}<br>
+<h5>New Authorized Center signup request </h5>
+
+<table width="70%" border id="tab">
+<tr><th>*<th>Center Name<th>City<th>Address<th>
+{% for d1 in data %}
+
+<TR><TD>{{forloop.counter}}<TD>{{d1.name}}<TD>{{d1.city}}<TD>{{d1.address}}<TD> 
+
+<table width="100%">
+<tr>
+	<td><form method="get" action="/accept/">
+
+	<input type="hidden" name="id" value="{{d1.email}}">
+	<input type="submit"   class="form-control" value="Accept">
+
+</form>
+<td>
+<form method="get" action="/reject/">
+	
+	<input type="hidden" name="id" value="{{d1.email}}">
+	<input type="submit"   class="form-control" value="Reject">
+
+</form>
+
+</table>
+{% endfor %}
+
+</table>
+
+
+{% endif %}
+
+<br><br><br><br><br><br><br><br><br>
+
+
+{% endblock %}

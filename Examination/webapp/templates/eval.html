@@ -1,0 +1,36 @@
+{% extends 'a_base.html' %}
+{% block content %}
+<h5><font size="" color="blue">{{msg}}</font></h4>
+<center>
+<h2>View Results</h2>
+<br>
+
+<center>
+<form method="post" action="/eval/">
+ {% csrf_token %}			
+ 
+<table id="tab" width="50%">
+
+
+	<tr><td>
+	
+	<input type="submit" value="Evaluate the CNN model" class="form-control">
+
+</form>
+
+</tr>
+</table>
+{% if b %}<br><br>
+
+<table id="tab" width="70%">
+<tr><th>Accuracy<th>Precision<th>Recall<th>F1 Score
+
+<tr><td>{{data.a}}<td>{{data.p}}<td>{{data.r}}<td>{{data.f}}
+</table>
+
+<br>
+<img src="data:image/png;base64,{{ image_base64 }}" width="640" height="427" border="0" alt="">
+
+{% endif %}
+
+{% endblock %}

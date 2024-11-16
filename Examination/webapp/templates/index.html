@@ -1,0 +1,317 @@
+{% load static %}
+{% static "assets/images" as baseUrl %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Evalify - Transforming Assessment</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+
+</head>
+
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke">
+                <h1><a class="navbar-brand" href="/">
+                        <span class="brand-color">Evalify</span> 
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/adminlogin">Admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user">User</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    
+    <!--/Banner-Start-->
+    <section class="banner-19">
+        <div class="banner-layer">
+            <div class="main-content-top">
+                <div class="container">
+                    <div class="main-content">
+                        <div class="banner-left">
+                            
+                            <h4>Welcome to Evalify</h4>
+                            <h6>Leading the Future of Assessments</h6>
+                            <p>Our modern solution for streamlined, continuous evaluation.</p>
+                            <a href="#about" class="btn btn-primary mt-4">Learn More</a>
+                        </div>
+                        <div class="banner-right">
+                            <!-- Add an image or animation if needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//Banner-End-->
+
+    <!--/About-section-->
+    <section class="w3l-about-6 py-5" id="about">
+        <div class="container py-lg-5 py-md-3">
+            <div class="row align-items-center">
+                <div class="col-lg-6 pe-lg-5">
+                    <h6 class="title-subw3hny">Our Mission</h6>
+                    <h3 class="title-w3l">Evalify - A Smarter Way to Evaluate</h3>
+                    <p class="mt-md-4 mt-3">We believe in continuous and objective evaluation that extends beyond just exams. Our platform promotes growth and insight-driven performance tracking.</p>
+                    <p class="mt-md-2 mt-3">Our system is designed for fairness, ease of use, and effective assessment, making education more personalized and transparent.</p>
+                    <a href="#features" class="btn btn-secondary mt-4">Explore Features</a>
+                </div>
+                <div class="HomeAboutImages col-lg-6 mt-lg-0 mt-5">
+                    <div class="row position-relative">
+                        <div class="col-6">
+                            <img src="{% static 'assets/images/a1.jpg' %}" alt="Assessment Tools" class="radius-image img-fluid">
+                        </div>
+                        <div class="col-6 mt-4">
+                            <img src="{% static 'assets/images/a2.jpg' %}" alt="Evaluation Insights" class="radius-image img-fluid mb-md-3 mb-2">
+                            <img src="{% static 'assets/images/a3.jpg' %}" alt="Performance Metrics" class="radius-image img-fluid mt-md-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//About-section-->
+
+<!-- Features Section -->
+<body data-theme="light"> <!-- Change to 'dark' for dark theme -->
+    <section class="w3l-features py-5" id="features">
+        <div class="container py-lg-5 py-md-3">
+            <div class="title-section mb-md-5 mb-4">
+                <h3 class="title-w3l">Why Choose Evalify?</h3>
+                <p>Our platform offers advanced features that simplify the evaluation process and provide clear insights.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card feature-box">
+                        <div class="card-body text-center">
+                            <i class="fas fa-laptop-code fa-2x mb-3"></i>
+                            <h5 class="card-title">Automated Grading</h5>
+                            <p class="card-text">Save time with automatic grading tools that reduce manual effort and provide real-time feedback.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-box">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-line fa-2x mb-3"></i>
+                            <h5 class="card-title">Performance Tracking</h5>
+                            <p class="card-text">Track student progress over time with detailed analytics and reports for better insights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-box">
+                        <div class="card-body text-center">
+                            <i class="fas fa-lock fa-2x mb-3"></i>
+                            <h5 class="card-title">Secure Assessments</h5>
+                            <p class="card-text">Ensure integrity with secure, tamper-proof exams and assessments.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Additional Feature Cards -->
+                <div class="col-md-4">
+                    <div class="card feature-box">
+                        <div class="card-body text-center">
+                            <i class="fas fa-chart-pie fa-2x mb-3"></i>
+                            <h5 class="card-title">Data Analytics</h5>
+                            <p class="card-text">Gain insights from detailed data analytics to improve evaluation strategies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-box">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users fa-2x mb-3"></i>
+                            <h5 class="card-title">User-Friendly Interface</h5>
+                            <p class="card-text">Experience a clean and intuitive interface designed for ease of use.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-box">
+                        <div class="card-body text-center">
+                            <i class="fas fa-sync fa-2x mb-3"></i>
+                            <h5 class="card-title">Continuous Improvement</h5>
+                            <p class="card-text">Regular updates to ensure the platform meets the latest educational standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//Features Section-->
+</body>
+
+
+
+
+    <!--/Footer-->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29-w3l py-5">
+            <div class="container pt-md-5">
+                <div class="w3l-footer-text-style">
+                    <div class="footer-list-cont d-sm-flex align-items-center justify-content-between mb-5">
+                        <h2 class="w3logo"><a class="navbar-brand" href="/">
+                                <span class="sub-color">Evalify</span> - The Future of Assessments
+                            </a></h2>
+                        <div class="main-social-footer-29">
+                            <ul>
+                                <li class="w3follow mt-sm-0 mt-4">Follow Us: </li>
+                                <li><a href="#facebook" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#twitter" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#instagram" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#linkedin" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--//Footer-->
+
+    <!-- Js scripts -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-long-arrow-alt-up" aria-hidden="true"></span>
+    </button>
+<!-- Js scripts -->
+<button onclick="topFunction()" id="movetop" title="Go to top">
+    <span class="fas fa-long-arrow-alt-up" aria-hidden="true"></span>
+</button>
+<style>
+    /* Define CSS variables for dark and light themes */
+    :root {
+        --card-bg-light: #f8f9fa; /* Light theme card background */
+        --card-bg-dark: #2b2b2b; /* Dark theme body background */
+        --card-bg-dark-light: #3a3a3a; /* Slightly lighter shade for dark theme cards */
+        --card-border-radius: 1.2rem; /* Card border radius */
+        --card-shadow-light: rgba(0, 0, 0, 0.1); /* Light theme shadow */
+        --card-shadow-dark: rgba(255, 255, 255, 0.1); /* Dark theme shadow */
+    }
+
+    body[data-theme='light'] .feature-box {
+        background-color: var(--card-bg-light);
+        color: #000; /* Text color for light theme */
+        border: none;
+        border-radius: var(--card-border-radius);
+        box-shadow: 0 2px 5px var(--card-shadow-light); /* Light theme shadow */
+    }
+
+    body[data-theme='dark'] .feature-box {
+        background-color: rgb(51 97 179 / 10%); /* Slightly lighter shade for dark theme cards */
+        color: #fff; /* Text color for dark theme */
+        border: none;
+        border-radius: var(--card-border-radius);
+        box-shadow: 0 2px 5px var(--card-shadow-dark); /* Dark theme shadow */
+    }
+
+    .feature-box {
+        height: 240px; /* Fixed height for cards */
+        margin-bottom: 30px; /* Space between rows */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .card {
+        min-height: 120px; /* Ensure all cards have the same minimum height */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .feature-box {
+            height: auto; /* Allow flexibility on smaller screens */
+        }
+    }
+</style>
+
+<script>
+    // Function to toggle between light and dark themes
+    document.getElementById('checkbox').addEventListener('change', function() {
+        if (this.checked) {
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark'); // Store the theme in local storage
+        } else {
+            document.body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light'); // Store the theme in local storage
+        }
+    });
+
+    // On page load, check local storage for theme preference
+    window.onload = function() {
+        const theme = localStorage.getItem('theme'); // Get the theme from local storage
+        if (theme) {
+            document.body.setAttribute('data-theme', theme); // Apply the saved theme
+            document.getElementById('checkbox').checked = theme === 'dark'; // Check the checkbox if dark theme is selected
+        }
+    };
+
+    window.onscroll = function () {
+        scrollFunction();
+    };
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("movetop").style.display = "block";
+        } else {
+            document.getElementById("movetop").style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+
+    <!-- Include Template JavaScript -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/theme-change.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Exam</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #video {
+            width: 600px;
+            height: 400px;
+            background-color: #000;
+        }
+        #question-area {
+            margin-top: 20px;
+        }
+        #feedback-area {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Start Your Exam</h1>
+
+    <!-- Video Section for Face Emotion Recognition -->
+    <div id="video-container">
+        <video id="video" autoplay muted></video>
+        <button onclick="startCamera()">Start Camera</button>
+    </div>
+
+    <!-- Question and Answer Section -->
+    <div id="question-area">
+        <h2 id="question"></h2>
+        <button onclick="nextQuestion()">Next Question</button>
+        <button onclick="submitAnswer()">Submit Answer</button>
+    </div>
+
+    <!-- Feedback Area -->
+    <div id="feedback-area">
+        <p id="real-time-feedback">Feedback: </p>
+    </div>
+
+    <script>
+        let questions = [
+            "What are your strengths?",
+            "Tell me about a challenging situation you faced at work.",
+            "Why do you want this job?",
+            // Add more questions as needed
+        ];
+        let currentQuestionIndex = 0;
+
+        // Set the initial question
+        document.getElementById("question").innerText = questions[currentQuestionIndex];
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                document.getElementById("question").innerText = questions[currentQuestionIndex];
+            } else {
+                alert("You have completed the exam.");
+                submitExam();
+            }
+        }
+
+        function submitAnswer() {
+            const answer = "User's verbal answer here";
+            fetch('/answerpro_combined/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ question: questions[currentQuestionIndex], answer: answer })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("real-time-feedback").innerText = "Feedback: " + data.feedback;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function submitExam() {
+            fetch('/submit_exam/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({ exam_complete: true })
+            })
+            .then(response => response.json())
+            .then(data => {
+                window.location.href = "/uviewresult/";
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        // Camera for Emotion Recognition
+        function startCamera() {
+            const video = document.getElementById("video");
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(stream => {
+                    video.srcObject = stream;
+                    analyzeEmotions(stream);
+                })
+                .catch(error => {
+                    console.error("Error accessing camera:", error);
+                });
+        }
+
+        function analyzeEmotions(stream) {
+            const video = document.getElementById("video");
+
+            // Example setup: video processing for emotion recognition (to be handled by backend)
+            setInterval(() => {
+                const canvas = document.createElement('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imageData = canvas.toDataURL('image/png');
+
+                fetch('/process_emotion/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    },
+                    body: JSON.stringify({ image: imageData })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("real-time-feedback").innerText = "Feedback: " + data.emotion_feedback;
+                })
+                .catch(error => console.error('Error:', error));
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

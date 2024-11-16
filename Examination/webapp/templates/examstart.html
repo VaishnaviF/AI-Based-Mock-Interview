@@ -1,0 +1,23 @@
+{% extends 'u_base.html' %}
+{% block content %}
+<h5><font size="" color="blue">{{ msg }}</font></h5>
+<center>
+<h2>Exam</h2>
+<br>
+
+<center>
+<table id="tab" width="70%">
+    <tr><td>Question</td></tr>
+    <tr><td><h4>{{ data.question }}</h4></td></tr>
+</table>
+<br>
+<form method="post" action="{% url 'answerpro' %}">
+    {% csrf_token %}
+    <input type="hidden" name="que" value="{{ data.question }}">
+    <input type="hidden" name="qid" value="{{ data.id }}">
+    <input type="hidden" name="sub" value="{{ sub }}">
+    <input type="hidden" name="category" value="{{ category }}">
+    <input type="submit" value="Answer" class="form-control">
+</form>
+
+{% endblock %}

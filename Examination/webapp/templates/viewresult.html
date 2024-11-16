@@ -1,0 +1,32 @@
+
+{% extends 'u_base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h3>
+View Exam Data<br><br>
+</h2>
+</h3>
+<center>
+				<table id="tab" width="100%">
+<tr>
+	<th width="5%">Sno<th>Question<th>Answer<th>Emotion score (30%)<th>Semantic and Syntax score (20%)<th>Answer Correctness (50%)
+
+
+				{% for d in data %}
+<tr><td>{{forloop.counter}}<td>{{d.question}}<td>{{d.answer}}<td>{{d.sc1}}<td>{{d.sc2_g}}<td>{{d.sc3_m}}
+
+				{% endfor %}
+</table>
+
+<center><br><br>
+
+       
+	
+{% endblock %}

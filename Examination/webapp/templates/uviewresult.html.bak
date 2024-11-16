@@ -1,0 +1,44 @@
+
+{% extends 'u_base.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<h3>
+	
+{{msg}}
+	
+	<h3>
+	Exam Results<br><br>
+</h2>
+</h3>
+<center>
+				<table id="tab" width="100%">
+<tr>
+	<th width="5%">Sno<th>Exam Id<th>Date & Time <th>Subject<th>Result<th>
+
+
+				{% for d in data %}
+<tr><td>{{forloop.counter}}<td>{{d.eid}}<td>{{d.date_time}}<td>{{d.subject}}<td>{{d.result}} %
+
+
+<td >
+
+{% if d.stz != 'Wait for evaluation' %}
+
+<form method="get" action="/viewdetail/">
+<input type="hidden" name="eid" value="{{d.eid}}">
+	<input type="submit" value="View Details">
+</form>
+
+{% endif %}
+
+				{% endfor %}
+</table>
+
+<center><br><br>
+
+       
+	
+{% endblock %}

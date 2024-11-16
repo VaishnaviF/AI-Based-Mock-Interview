@@ -1,0 +1,66 @@
+{% extends 'u_base.html' %}
+{% block content %}
+<h5><font size="" color="blue">{{ msg }}</font></h5>
+<center>
+<h2>Exams</h2>
+<br>
+
+{% if not subjects %}
+    <!-- Step 1: Select Category -->
+    <h4>Select a Category:</h4>
+    <table id="tab" width="70%" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Category</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in categories %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ category.category }}</td>
+                <td width="10%">
+                    <form method="post" action="{% url 'examinit' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="category" value="{{ category.category }}">
+                        <input type="submit" value="Next" class="btn btn-primary">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <!-- Step 2: Select Subject for the chosen Category -->
+    <h4>Category: {{ selected_category }}</h4>
+    <br>
+    <table id="tab" width="70%" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Subject</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subject in subjects %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ subject.subject }}</td>
+                <td width="10%">
+                    <form method="post" action="{% url 'examstart' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="category" value="{{ selected_category }}">
+                        <input type="hidden" name="sub" value="{{ subject.subject }}">
+                        <input type="submit" value="Start Exam" class="btn btn-primary">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+
+{% endblock %}

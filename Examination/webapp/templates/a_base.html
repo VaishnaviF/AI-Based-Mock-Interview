@@ -1,0 +1,279 @@
+{% load static %}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>                        Theory Evaluation of <span class="sub-color">Examination</span></title>
+    <!-- google fonts -->
+    <!-- Template CSS -->
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %} ">
+</head>
+
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke">
+                <h1><a class="navbar-brand" href="index.html">
+                                             
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/adminhome">Home</a>
+                        </li>
+                               <li class="nav-item">
+                            <a class="nav-link" href="/datasetpage">Upload Dataset</a>
+                        </li>
+                       </li>
+                               <li class="nav-item">
+                            <a class="nav-link" href="/training">FE Model </a>
+                        </li>
+                               <li class="nav-item">
+                            <a class="nav-link" href="/evaluation"> Model Evaluation </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aviewresult"> Exam Results</a>
+                        </li>
+                     
+				 </ul>
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+
+                        <div class="theme-switch-wrapper">
+			<a href="/adminlogout"><img src="{% static 'assets/images/logout.png' %}" width="40" height="40" alt="" ></a>&nbsp;&nbsp;
+                    
+
+							<label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                              
+								<div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title">
+                        
+					Admin Portal
+
+						</h2>
+                        <p class="inner-page-para mt-2">
+                    </p>
+                    </div>
+                    <div class="w3breadcrumb-right">
+                        <ul class="breadcrumbs-custom-path">
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+	
+<style>
+
+  #table_wrapper{ solid olive;float:center; }
+  #tbody{height:350px;overflow-y:auto;width:600px;background:#b2b2b2;}
+  table{border-collapse:collapse; }
+  td{padding:1px 5px;
+  
+   padding-top: 12px;
+    padding-bottom: 12px;
+	padding: 8px;
+  /* pixels */
+ /* to avoid the hacks for the padding */
+} 
+  .td1{width:100px;}
+  .td2{width:140px;}
+  .td3{border-right-width:0;} /* optional */
+
+
+
+#tab {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+   
+}
+
+#tab td, #tab th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tab tr:nth-child(even){background-color: #f2f2f2;}
+
+#tab tr:hover {background-color: #ddd;}
+
+#tab th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FFBB05;
+    color: white;
+}
+</style>
+    <!--//inner-page-->
+    <!-- contact-form -->
+    <section class="w3l-contact-main" id="contact">
+        <div class="contact-infhny py-5">
+            <div class="container py-md-5">
+			
+
+		{% block content %}
+
+		  
+                <!-- <div class="title-content text-center mb-md-5 mb-4">
+                    <h6 class="title-subw3hny">Send us a message</h6>
+                    <h3 class="title-w3l mx-lg-5">Keep In Touch With Us.</h3>
+                    <p class="text-para mt-2">Progressively syndicate user-centric schemas without front-end synergy. Monotonectally envisioneer.</p>
+                </div>
+                 -->
+		  {% endblock %}
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //contact-form -->
+    <!-- contact map -->
+
+    <!-- //contact map -->
+
+    <!--//contact-->
+    <!--/footer-->
+    <footer class="w3l-footer-29-main">
+        <div class="footer-29-w3l py-5">
+            <div class="container pt-md-5">
+                <div class="w3l-footer-text-style">
+                    <div class="footer-list-cont d-sm-flex align-items-center justify-content-between mb-5">
+
+                        <h2 class="w3logo"><a class="navbar-brand" href="index.html">
+                           Theory Evaluation of <span class="sub-color">Examination</span>
+                               </a></h2>
+                        <div class="main-social-footer-29">
+                            <ul>
+                                <li class="w3follow mt-sm-0 mt-4">Follows On : </li>
+                                <li><a href="#facebook" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#twitter" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#instagram" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#linkedin" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-long-arrow-alt-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+    <!-- //move top -->
+
+    <!-- Template JavaScript -->
+	<script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'assets/js/theme-change.js' %}"></script>
+<script src="{% static 'assets/js/circles.js' %}"></script>
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function() {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function() {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function() {
+            $('.navbar-toggler').click(function() {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

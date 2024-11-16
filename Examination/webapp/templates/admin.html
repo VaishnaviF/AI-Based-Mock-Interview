@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %} 
+
+<font size="+1" color="red">{{msg}}</font>
+
+<!-- Centering the card with reduced vertical spacing -->
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh; padding-top: 20px; padding-bottom: 20px;">
+    <!-- Bootstrap Card -->
+    <div class="card" style="width: 400px; background-color: rgb(51 97 179 / 10%); backdrop-filter: blur(10px); border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div class="card-body">
+            <h2 class="text-center">Admin Login</h2><br>
+
+            <form method="post" action="/adminloginaction/">
+                {% csrf_token %}
+
+                <table class="table-borderless" style="width: 100%;">
+                    <tr>
+                        <td>
+                            <input size="60" class="form-control" type="text" name="aid" placeholder="User ID" required="required" onblur="validate1()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="form-control" size="60" type="password" name="pwd" placeholder="Password" required="required" onblur="validate5()" style="background-color: var(--input-bg); color: var(--input-text); border-color: var(--input-border);">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">
+                            <br>
+                            <input type="submit" class="btn btn-primary" value="Login">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

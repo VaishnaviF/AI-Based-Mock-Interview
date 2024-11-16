@@ -1,0 +1,47 @@
+{% extends 'u_base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% static "assets/images" as baseUrl %}
+
+<h5><font size="" color="blue">{{ msg }}</font></h5>
+<center>
+    <h2>Answer here</h2>
+    <br>
+    <form method="post" action="/answerpro2/">
+        {% csrf_token %}
+
+        <input type="hidden" name="que" value="{{ data.question }}">
+        <input type="hidden" name="qid" value="{{ data.id }}">
+        <input type="hidden" name="sub" value="{{ data.sub }}">
+
+        <!-- Microphone button with JavaScript onClick event -->
+        <input type="image" src="{{ baseUrl }}/MIC.png" alt="Submit" height="55" style="" onclick="showSpeakNow()"><br>
+    </form>
+</center>
+
+<!-- Display feedback here -->
+<h5 style="color: green;">Feedback: {{ feedback }}</h5>
+
+<!-- JavaScript to show "Speak Now" message -->
+<script>
+    function showSpeakNow() {
+        // Create a "Speak Now" message when the microphone button is clicked
+        const speakNowMessage = document.createElement('h5');
+        speakNowMessage.innerHTML = 'Speak Now...';
+        speakNowMessage.style.color = 'red';
+        speakNowMessage.style.marginTop = '10px';
+
+        // Append the message to the center of the form
+        document.querySelector('center').appendChild(speakNowMessage);
+
+        // Optionally, remove the message after a few seconds
+        setTimeout(() => {
+            speakNowMessage.remove();
+        }, 3000);
+    }
+</script>
+
+{% endblock %}
