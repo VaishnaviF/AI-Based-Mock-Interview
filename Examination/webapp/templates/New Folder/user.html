@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %} 
+			<div class="col-md-8 blog-left">
+
+<font size="+1" color="red">{{msg}}
+
+</font>
+
+<!-- template.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+
+<script>
+    /* Break back button */
+    window.onload = function(){
+      var i = 0;
+      var previous_hash = window.location.hash;
+      var x = setInterval(function(){
+        i++;
+        window.location.hash = "/noop/" + i;
+        if (i==10){
+          clearInterval(x);
+          window.location.hash = previous_hash;
+        }
+      }, 10);
+    }
+</script>
+
+</head>
+<body>
+    <!-- Your HTML content goes here -->
+</body>
+</html>
+
+
+
+
+<h2>Create an Account </h2>
+<br>
+
+<br><form method="post" action="/usignupaction/">
+	{% csrf_token %} 
+<table>
+                    <tr><td><input class="form-control"  type="text" name="name" placeholder="Name" required="required"   size="50"  ></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="e_mail" name="mail" placeholder="Email, example@example.com" required="required"   size="50"  onblur="validate1()"></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="text" name="phone" placeholder="Phone" required="required"  size="50"   onblur="validate3()"></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="text" name="city" placeholder="City" required="required"  size="50"   onblur="validate3()"></input><br></td></tr>
+                    <tr><td><input class="form-control"  type="Password" name="pass_word" placeholder="Password" required="required"   size="50"   onblur="validate5()"></input><br></td></tr>
+
+                    <tr><td>
+					<select name="gen"class="form-control" width="100%">
+						<option value="male" selected>Male
+						<option value="female">Female
+					</select><br>
+
+                   
+					<tr><td><br><input type="submit" class="form-control" value="Register"  size="50"  >
+                
+</table>
+</form>
+			 <div class="clearfix"> </div>
+			 </div>
+			</div>
+
+			<div class="col-md-4 blog-right">
+				<div class="blog-cate">
+			<h2>Login</h2><br>
+
+<form method="post" action="/userloginaction/">
+	{% csrf_token %} 
+                    
+                    <tr><td><input   size="60"  class="form-control"  type="e_mail" name="mail" placeholder="Email, example@example.com" required="required" onblur="validate1()"><br></input></td></tr>
+                    <tr><td><input class="form-control"   size="60"    type="Password" name="pass_word" placeholder="Password" required="required" onblur="validate5()"></input></td></tr>
+                    <tr><td><br><input type="submit" class="form-control" value="Login">
+                        
+                
+</table>
+</form>
+
+</div>
+
+{% endblock %}

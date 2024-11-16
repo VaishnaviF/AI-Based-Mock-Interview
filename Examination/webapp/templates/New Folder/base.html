@@ -1,0 +1,119 @@
+
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Class Allotment System</title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %} ">
+<link rel="stylesheet" href="{% static 'css/style.css' %} ">
+
+<script src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Donate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Google Fonts-->
+
+
+<!--google fonts-->
+</head>
+<body>
+<!--banner start here-->
+<div class="banner1">
+	<div class="header">
+   <div class="container">
+     <div class="header-main">
+	   <div class="logo">
+	     <h1><a href="index.html">Class Allotment System</a></h1>
+	   </div>
+	   <div class="header-icons">
+	   	 <ul>
+	   	 	<li><a href="#" class="fb"> </a></li>
+	   	 	<li><a href="#" class="twit"> </a></li>
+	   	 	<li><a href="#" class="gmail"> </a></li>
+	   	 	<li><a href="#" class="dri"> </a></li>
+	   	 </ul>
+	   </div>
+	    <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+<div class="top-nav">
+            	<span class="menu"> <img src="images/icon.png" alt=""></span>	
+				<ul class="res">
+				<li><a class="" href="/"><i class="glyphicon glyphicon-home"> </i>Home</a></li>
+			<li><a href="/adminlogin"><i class="glyphicon glyphicon-user"> </i>Admin</a></li>
+			<li><a href="/user"><i class="glyphicon glyphicon-user"> </i>Studdent</a></li>
+			<li><a href="/manufacturers"><i class="glyphicon glyphicon-user"> </i>Faculty</a></li>
+
+				</ul>
+				<!-- script-for-menu -->
+							 <script>
+							   $( "span.menu" ).click(function() {
+								 $( "ul.res" ).slideToggle( 300, function() {
+								 // Animation complete.
+								  });
+								 });
+							</script>
+			<!-- /script-for-menu -->
+</div>		
+</div>	
+<!--banner end here-->
+<!--blog start here-->
+<div class="blog">
+	<div class="container">
+		<div class="blog-main">
+
+
+		{% block content %}
+
+		  
+<!-- 
+			<div class="col-md-8 blog-left">
+		--------------------------------------------------------
+			 <div class="clearfix"> </div>
+			 </div>
+			</div>
+			<div class="col-md-4 blog-right">
+				<div class="blog-cate">
+			
+				
+		---------------------------------------
+				</div>
+ -->
+
+		  {% endblock %}
+
+
+
+
+		</div>
+	</div>
+</div>
+</div>
+<!--blog end here-->
+<!--footer start here-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-main">
+			
+			</div>
+			<div class="clearfix"> </div>		
+		</div>
+	</div>
+</div>
+<!--footer end here-->
+<!--copy rights start here-->
+<div class="copy-right">
+	<div class="container">
+		 <div class="copy-rights-main">
+    	    <p>© 2023. All Rights Reserved.</p>
+    	 </div>
+    </div>
+</div>
+<!--copy right end here-->
+</body>
+</html>

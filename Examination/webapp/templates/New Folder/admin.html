@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %} 
+			<div class="col-md-8 blog-left">
+
+<font size="+1" color="red">{{msg}}
+
+</font>
+
+
+</table>
+</form>
+			 <div class="clearfix"> </div>
+			 </div>
+			</div>
+
+			<div class="col-md-4 blog-right">
+				<div class="blog-cate">
+			<h2>Admin Login</h2><br>
+
+<form method="post" action="/adminloginaction/">
+	{% csrf_token %} 
+                    
+                    <tr><td><input   size="60"  class="form-control"  type="text" name="aid" placeholder="User ID" required="required" onblur="validate1()"><br></input></td></tr>
+                    <tr><td><input class="form-control"   size="60"    type="Password" name="pwd" placeholder="Password" required="required" onblur="validate5()"></input></td></tr>
+                    <tr><td><br><input type="submit" class="form-control" value="Login">
+                        
+                
+</table>
+</form>
+
+</div>
+
+{% endblock %}
